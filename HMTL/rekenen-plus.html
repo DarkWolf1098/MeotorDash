@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekenen Plus</title>
     <link rel="stylesheet" href="../CSS/styles.css">
-    <script src="../JS/game.js"></script>
+    <script src="../JS/game.js" defer></script>
 </head>
 <body>
+    <div id="level">Level: 0</div>
     <div id="score">Score: 0</div>
+    <div id="lives">Lives: 3</div>
+    <div id="timer">Time: 10</div>
     <div id="problem"></div>
-    <textarea id="numberInput" class="number-input" inputmode="numeric" placeholder="Enter numbers only"></textarea>
-    <a id="return-btn" href="rekenen-buttons.html" target="_top">Terug</a>
+<input type="number" id="numberInput" class="number-input" pattern="[0-9]*" inputmode="numeric" placeholder="Enter answer" min="0" max="999" autocomplete="off"></input>
+    <div id="final-score" class="hidden">Final Score: 0</div>
+    <button id="restart-btn" class="hidden">Restart</button>
+    <a id="return-btn" href="rekenen-buttons.html" target="_top">back</a>
 </body>
 </html>
